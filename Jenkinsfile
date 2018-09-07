@@ -12,11 +12,9 @@ pipeline {
                     bat 'python C:\\py\\common\\sendDingdingMessagepy.py --url="https://oapi.dingtalk.com/robot/send?access_token=b6297c7195cc4e7a35e30e13ddd1446c1d48ac77d8b6ddf0847d2e19cbd9fb4a" --content="Unable connect to database." --at="13570462144"'
                     return
                 }else if (batstatus==1) {
-                    stage('Version check error'){
                         println 'Technopedia version no match,ignore this job.'
                         bat 'python C:\\py\\common\\sendDingdingMessagepy.py --url="https://oapi.dingtalk.com/robot/send?access_token=b6297c7195cc4e7a35e30e13ddd1446c1d48ac77d8b6ddf0847d2e19cbd9fb4a" --content="Technopedia version no match,ignore this job." --at="13570462144"'
                         return
-                    }
                 }
         }
         }
