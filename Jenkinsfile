@@ -3,8 +3,9 @@ pipeline {
 
     stages {
         stage('Checking Technopedia version') {
-            println 'Technopedis DB host: 192.168.10.89'
+            
             steps {
+                println 'Technopedis DB host: 192.168.10.89'
                 batstatus= bat(returnStatus: true, script: 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python37\\python C:\\py\\getTechnopediaVersion.py') 
                 if ( batstatus==2 ) {
                     currentBuild.result = 'FAILURE'
