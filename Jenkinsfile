@@ -2,7 +2,7 @@
 pipeline {
     stages {
         stage('Checking Technopedia version') {
-            def testvalue = "test"
+            // def testvalue = "test"
             steps {
                 
                 echo 'test pipeline script'
