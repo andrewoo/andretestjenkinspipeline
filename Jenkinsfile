@@ -1,5 +1,6 @@
 // Jenkinsfile (Declarative Pipeline)
 pipeline {
+    agent any
     stages {
         stage('Checking Technopedia version') {
             // def testvalue = "test"
