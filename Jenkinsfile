@@ -1,14 +1,17 @@
 // Jenkinsfile (Declarative Pipeline)
 pipeline {
-    agent any
-
     stages {
         stage('Checking Technopedia version') {
             def testvalue = "test"
             steps {
                 
-                echo ${testvalue}
-                // println 'Technopedis DB host: 192.168.10.89'
+                echo 'test pipeline script'
+                script {
+                    def testvalue = "test"
+                    echo ${testvalue}
+
+                }
+                                // println 'Technopedis DB host: 192.168.10.89'
                 // def batstatus = bat(returnStatus: true, script: 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python37\\python C:\\py\\getTechnopediaVersion.py') 
                 // if ( batstatus==2 ) {
                 //     currentBuild.result = 'FAILURE'
